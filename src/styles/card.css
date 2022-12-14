@@ -1,5 +1,31 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .card {
   margin: 1em;
   padding: 1em;
-  background-color: palegreen;
+  background-color: #00231e;
+  border: 1px solid #6cae6c;
+  border-radius: 5px;
+  color: #6cae6c;
+  display: flex;
+  flex-direction: column;
+}
+.card ul {
+  list-style: none;
+  padding: 5px;
+}
+.card ul .name {
+  color: #89d589;
+  font-size: 1.5em;
+  max-width: 200px;
+  font-weight: 800;
+}
+.card img {
+  max-width: 200px;
+  margin: 0 auto;
+  border: 1px solid #6cae6c;
+  border-radius: 5px;
 }

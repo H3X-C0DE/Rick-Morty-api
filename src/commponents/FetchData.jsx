@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "../styles/card.css";
-/**
- * Fetches data from some API and displays it
- */
+
+//  Fetches data from some API and displays it
+
 function FetchData() {
   // Somewhere to store our data
   const [fetchedData, setFetchedData] = useState(null);
@@ -20,21 +20,23 @@ function FetchData() {
   }, []);
 
   return (
-    <ul>
+    <div className="card-container">
       {fetchedData &&
         fetchedData.map((character, index) => {
           return (
-            <>
-              <div className="card" id={character.id}>
-                <img src={character.image} alt="" />
-                <li key={index}>{character.name}</li>
-                <li key={index}>{character.status}</li>
-                <li key={index}>{character.gender}</li>
-              </div>
-            </>
+            <div key={index} id={index} className="card">
+              <img src={character.image} alt={character.name} />
+              <ul>
+                <li className="name">{character.name}</li>
+                <li>Sex: {character.gender}</li>
+                <li>Status: {character.status}</li>
+                <li>Origin: {character.origin.name}</li>
+                <li>Unique trait: {character.type}</li>
+              </ul>
+            </div>
           );
         })}
-    </ul>
+    </div>
   );
 }
 
