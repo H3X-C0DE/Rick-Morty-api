@@ -12,15 +12,16 @@
   color: #6cae6c;
   display: flex;
   flex-direction: column;
+  min-width: 280px;
 }
 .card ul {
   list-style: none;
   padding: 5px;
+  max-width: 250px;
 }
 .card ul .name {
   color: #89d589;
   font-size: 1.5em;
-  max-width: 200px;
   font-weight: 800;
 }
 .card img {
