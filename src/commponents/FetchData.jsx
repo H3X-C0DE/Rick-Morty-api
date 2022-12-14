@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "../styles/card.css";
-import Button from "../components/Button";
 //  Fetches data from some API and displays it
 
 function FetchData() {
