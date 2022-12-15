@@ -4,7 +4,7 @@ import "./styles/lengths.css";
 import "./styles/palette.css";
 
 // Libraries
-import FetchData from "./commponents/FetchData";
+import FetchData from "./components/FetchData";
 
 function App() {
   return (
