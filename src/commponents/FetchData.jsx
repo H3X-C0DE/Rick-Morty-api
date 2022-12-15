@@ -22,7 +22,7 @@ function FetchData() {
     }
 
     getData();
-  }, []);
+  }, [apiUpdate]);
   return (
     <>
       <div className="card-container">
