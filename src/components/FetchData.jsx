@@ -46,7 +46,7 @@ const Home = () => {
   }, [api]);
   return (
     <div className="App">
-      <h1 className="text-center mb-3">Characters</h1>
+      <h1 className="headerTitle">Characters</h1>
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
@@ -58,7 +58,7 @@ const Home = () => {
             updateSpecies={updateSpecies}
             updatePageNumber={updatePageNumber}
           />
-          <div className="col-lg-8 col-12">
+          <div className="container">
             <div className="row">
               <Card page="/" results={results} />
             </div>
