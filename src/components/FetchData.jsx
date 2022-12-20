@@ -6,13 +6,12 @@ import Navbar from "./Navbar/Navbar";
 import Filter from "./Filter/Filter";
 
 // IMPORT STYLES //
-import "./Card/card-style.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Episodes from "./Pages/Episodes";
 // import Location from "./Pages/Location";
 import CardDetails from "./Card/CardDetails";
-
+import "../index.css";
 function App() {
   return (
     <Router>
@@ -47,6 +46,7 @@ const Home = () => {
   return (
     <div className="App">
       <h1 className="headerTitle">Characters</h1>
+
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
@@ -56,6 +56,11 @@ const Home = () => {
             updateStatus={updateStatus}
             updateGender={updateGender}
             updateSpecies={updateSpecies}
+            updatePageNumber={updatePageNumber}
+          />
+          <Pagination
+            info={info}
+            pageNumber={pageNumber}
             updatePageNumber={updatePageNumber}
           />
           <div className="container">
