@@ -1,5 +1,6 @@
 // CSS
 import "./index.css";
+import "./main.scss";
 
 // Libraries
 import FetchData from "./components/FetchData";

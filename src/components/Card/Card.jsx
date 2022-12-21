@@ -10,15 +10,15 @@ const Card = ({ page, results }) => {
 
       return (
         <Link style={{ textDecoration: "none" }} to={`${page}${id}`} key={id}>
-          <div className="card card-small">
-            <img src={image} alt="" />
-            <div className="card-info">
-              <div className="name">{name}</div>
+          <div className="card">
+            <img className="card__img" src={image} alt="" />
+            <div className="card__info">
+              <div className="card__name">{name}</div>
 
               {(() => {
                 if (status === "Dead") {
                   return (
-                    <div>
+                    <div className="card__status">
                       <span>Status: </span>
                       <span className="isDead">{status}</span>
                     </div>

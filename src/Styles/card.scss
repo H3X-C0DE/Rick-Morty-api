@@ -1,0 +1,9 @@
+.card {
+  background-color: beige;
+  &__img {
+    max-width: 400px;
+  }
+  &__info {
+    background-color: burlywood;
+  }
+}
