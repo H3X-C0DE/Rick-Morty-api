@@ -9,7 +9,12 @@ const Card = ({ page, results }) => {
       let { id, image, name, status, location } = infoData;
 
       return (
-        <Link style={{ textDecoration: "none" }} to={`${page}${id}`} key={id}>
+        <Link
+          className="card__link"
+          style={{ textDecoration: "none" }}
+          to={`${page}${id}`}
+          key={id}
+        >
           <div className="card">
             <img className="card__img" src={image} alt="" />
             <div className="card__info">
