@@ -17,18 +17,18 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
   return (
     <>
       <ReactPaginate
-        className="bg-blue-50 flex"
+        className="pagination"
         nextLabel="Next"
         forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
         previousLabel="Prev"
-        previousClassName="btn prev"
-        nextClassName="btn next"
+        previousClassName="pagination__number pagination__prev"
+        nextClassName="pagination__number  pagination__next"
         activeClassName="active"
         marginPagesDisplayed={width < 576 ? 1 : 2}
         pageRangeDisplayed={width < 576 ? 1 : 2}
         pageCount={info?.pages}
         onPageChange={pageChange}
-        pageClassName="page-item"
+        pageClassName="pagination__number"
         pageLinkClassName="page-link"
       />
     </>
