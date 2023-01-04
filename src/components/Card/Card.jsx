@@ -6,48 +6,47 @@ const Card = ({ page, results }) => {
 
   if (results) {
     display = results.map((infoData) => {
-      let { id, image, name, status, location } = infoData;
+      let { id, image, name, status, origin, species, type } = infoData;
 
       return (
         <Link
-          className="card__link"
+          className="card"
           style={{ textDecoration: "none" }}
           to={`${page}${id}`}
           key={id}
         >
-          <div className="card">
-            <img className="card__img" src={image} alt="" />
-            <div className="card__info">
-              <div className="card__name">{name}</div>
+          <img src={image} class="card__image" alt={image} />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
 
+              <div class="card__header-text">
+                <h3 class="card__title">{name}</h3>
+                {(() => {
+                  if (status === "Dead") {
+                    return <p className="isDead"> 🔴{status}</p>;
+                  } else if (status === "Alive") {
+                    return <p className="isAlive"> 🟢 {status}</p>;
+                  } else {
+                    return <p className="isUnknown"> 🔵 {status}</p>;
+                  }
+                })()}
+              </div>
+            </div>
+
+            <div class="card__description">
+              <p className="">Origin: {origin.name}</p>
+              <p className="">Species: {species}</p>
+              <p className=""></p>
               {(() => {
-                if (status === "Dead") {
-                  return (
-                    <div className="card__status">
-                      <span>Status: </span>
-                      <span className="isDead">{status}</span>
-                    </div>
-                  );
-                } else if (status === "Alive") {
-                  return (
-                    <div>
-                      <span>Status: </span>
-                      <span className="isAlive">{status}</span>
-                    </div>
-                  );
+                if (type === "") {
+                  return <p className="no-type"></p>;
                 } else {
-                  return (
-                    <div>
-                      <span>Status: </span>
-                      <span className="isUnknown">{status}</span>
-                    </div>
-                  );
+                  return <p className="type">Type: {type}</p>;
                 }
               })()}
-              <div className="">
-                <div className="">Last Location</div>
-                <div className="">{location.name}</div>
-              </div>
             </div>
           </div>
         </Link>

@@ -21,8 +21,8 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
         nextLabel="Next"
         forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
         previousLabel="Prev"
-        previousClassName="pagination__number pagination__prev"
-        nextClassName="pagination__number  pagination__next"
+        previousClassName=" pagination__prev"
+        nextClassName="  pagination__next"
         activeClassName="active"
         marginPagesDisplayed={width < 576 ? 1 : 2}
         pageRangeDisplayed={width < 576 ? 1 : 2}

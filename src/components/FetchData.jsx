@@ -64,7 +64,7 @@ const Home = () => {
             updatePageNumber={updatePageNumber}
           />
           <div className="container">
-            <div className="card__row">
+            <div className="cards">
               <Card page="/" results={results} />
             </div>
           </div>
