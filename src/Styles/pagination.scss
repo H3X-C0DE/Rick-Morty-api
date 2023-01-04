@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  list-style: none;
+  cursor: pointer;
+  margin: 1em auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+
+  &__next,
+  &__prev {
+    background-color: aqua;
+    cursor: pointer;
+  }
+  &__next:active,
+  &__prev:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &__number {
+    padding: $padding-1;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+}
