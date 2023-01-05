@@ -94,9 +94,11 @@
   }
 
   &__title {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0 0 0.3em;
-    color: #6a515e;
+    color: #2b2126;
+    font-family: $font-secondary;
+    font-weight: 700;
   }
 
   &__tagline {
@@ -122,6 +124,12 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
     color: #212121;
+    &__p {
+      font-weight: bold;
+    }
+    &__span {
+      font-weight: 300;
+    }
   }
 }
 

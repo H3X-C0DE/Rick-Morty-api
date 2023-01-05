@@ -37,14 +37,25 @@ const Card = ({ page, results }) => {
             </div>
 
             <div class="card__description">
-              <p className="">Origin: {origin.name}</p>
-              <p className="">Species: {species}</p>
-              <p className=""></p>
+              <p className="card__description__p">
+                Origin:{" "}
+                <span className="card__description__span">{origin.name}</span>
+              </p>
+              <p className="card__description__p">
+                Species:{" "}
+                <span className="card__description__span">{species}</span>
+              </p>
+              <p className="card__description__p"></p>
               {(() => {
                 if (type === "") {
-                  return <p className="no-type"></p>;
+                  return <p className="card__description__p no-type"></p>;
                 } else {
-                  return <p className="type">Type: {type}</p>;
+                  return (
+                    <p className="card__description__p type">
+                      Type:{" "}
+                      <span className="card__description__span">{type}</span>
+                    </p>
+                  );
                 }
               })()}
             </div>
