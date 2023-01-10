@@ -15,15 +15,15 @@ const Card = ({ page, results }) => {
           to={`${page}${id}`}
           key={id}
         >
-          <img src={image} class="card__image" alt={image} />
-          <div class="card__overlay">
-            <div class="card__header">
-              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+          <img src={image} className="card__image" alt={image} />
+          <div className="card__overlay">
+            <div className="card__header">
+              <svg className="card__arc" xmlns="http://www.w3.org/2000/svg">
                 <path />
               </svg>
 
-              <div class="card__header-text">
-                <h3 class="card__title">{name}</h3>
+              <div className="card__header-text">
+                <h3 className="card__title">{name}</h3>
                 {(() => {
                   if (status === "Dead") {
                     return <p className="isDead"> 🔴{status}</p>;
@@ -36,7 +36,7 @@ const Card = ({ page, results }) => {
               </div>
             </div>
 
-            <div class="card__description">
+            <div className="card__description">
               <p className="card__description__p">
                 Origin:{" "}
                 <span className="card__description__span">{origin.name}</span>
