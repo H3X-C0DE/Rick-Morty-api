@@ -5,7 +5,7 @@ const Gender = ({ updateGender, updatePageNumber }) => {
   let genders = ["female", "male", "genderless", "unknown"];
   return (
     <>
-      <div className="accordion">
+      <div className="filterTags">
         {genders.map((items, index) => {
           return (
             <FilterBTN

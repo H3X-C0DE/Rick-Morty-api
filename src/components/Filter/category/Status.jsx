@@ -4,7 +4,7 @@ import FilterBTN from "../FilterBTN";
 const Status = ({ updateStatus, updatePageNumber }) => {
   let status = ["Alive", "Dead", "Unknown"];
   return (
-    <div className="accordion">
+    <div className="filterTags">
       {status.map((item, index) => (
         <FilterBTN
           key={index}

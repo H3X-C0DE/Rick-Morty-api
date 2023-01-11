@@ -16,7 +16,7 @@ const Species = ({ updateSpecies, updatePageNumber }) => {
     "Planet",
   ];
   return (
-    <div className="accordion">
+    <div className="filterTags">
       {species.map((item, index) => {
         return (
           <FilterBTN

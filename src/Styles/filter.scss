@@ -24,10 +24,11 @@ input[type="radio"] {
     margin: 0 auto;
   }
 }
-.accordion {
+.clear {
+}
+.filterTags {
   display: flex;
   flex-wrap: wrap;
-  margin: 0.5em;
   justify-content: center;
 
   &__title {
