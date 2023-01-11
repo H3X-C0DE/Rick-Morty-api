@@ -5,7 +5,8 @@ const CardDetails = () => {
   let { id } = useParams();
 
   let [fetchedData, updateFetchedData] = useState([]);
-  let { name, location, origin, gender, image, status, species } = fetchedData;
+  let { name, location, origin, gender, image, status, species, type } =
+    fetchedData;
 
   let api = `https://rickandmortyapi.com/api/character/${id}`;
 
@@ -49,21 +50,39 @@ const CardDetails = () => {
         })()}
         <div className="content">
           <div className="">
-            <span className="fw-bold">Gender : </span>
-            {gender}
+            <p className="card__description__p">
+              Gender: <span className="card__description__span">{gender}</span>
+            </p>
           </div>
           <div className="">
-            <span className="fw-bold">Location: </span>
-            {location?.name}
+            <p className="card__description__p">
+              Location:{" "}
+              <span className="card__description__span">{location.name}</span>
+            </p>
           </div>
           <div className="">
-            <span className="fw-bold">Origin: </span>
-            {origin?.name}
+            <p className="card__description__p">
+              Origin:{" "}
+              <span className="card__description__span">{origin.name}</span>
+            </p>
           </div>
           <div className="">
-            <span className="fw-bold">Species: </span>
-            {species}
+            <p className="card__description__p">
+              Species:{" "}
+              <span className="card__description__span">{species}</span>
+            </p>
           </div>
+          {(() => {
+            if (type === "") {
+              return <p className="card__description__p no-type"></p>;
+            } else {
+              return (
+                <p className="card__description__p type">
+                  Type: <span className="card__description__span">{type}</span>
+                </p>
+              );
+            }
+          })()}
         </div>
       </div>
     </div>
