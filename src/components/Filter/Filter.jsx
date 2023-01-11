@@ -1,7 +1,7 @@
-import { React } from "react";
-import Gender from "./category/Gender";
-import Species from "./category/Species";
-import Status from "./category/Status";
+import React, { useState } from "react";
+import Gender from "./Category/Gender";
+import Species from "./Category/Species";
+import Status from "./Category/Status";
 
 const Filter = ({
   // pageNumber,
@@ -17,27 +17,39 @@ const Filter = ({
     updatePageNumber(1);
     window.location.reload(false);
   };
+  const [open, setOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="filter">
       {/* <h2 className="filter__title">Filters</h2> */}
-      <button onClick={clear} className="filter__btn">
+
+      <button onClick={clear} className="filter__btn clear">
         Clear Filters
       </button>
-      <div className="filter__tags" id="filterTags">
-        <Status
-          updatePageNumber={updatePageNumber}
-          updateStatus={updateStatus}
-        />
 
-        <Species
-          updatePageNumber={updatePageNumber}
-          updateSpecies={updateSpecies}
-        />
-        <Gender
-          updatePageNumber={updatePageNumber}
-          updateGender={updateGender}
-        />
-      </div>
+      <button className="filter__btn filterToggle" onClick={toggleDropdown}>
+        Filters
+      </button>
+      {open && (
+        <div>
+          <Status
+            updatePageNumber={updatePageNumber}
+            updateStatus={updateStatus}
+          />
+          <Species
+            updatePageNumber={updatePageNumber}
+            updateSpecies={updateSpecies}
+          />
+          <Gender
+            updatePageNumber={updatePageNumber}
+            updateGender={updateGender}
+          />
+        </div>
+      )}
     </div>
   );
 };
