@@ -1,5 +1,6 @@
 :root {
-  --surface-color: #fff;
+  --surface-color: #ffffff;
+  // --surface-color: #ffffffd1;
   --curve: 40;
 }
 
@@ -10,6 +11,8 @@
   margin: 4rem 5vw;
   padding: 0;
   list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .card {
@@ -20,6 +23,8 @@
   overflow: hidden;
   text-decoration: none;
   border: 5px solid var(--primary-color);
+  text-align: left;
+  text-transform: capitalize;
 
   &__image {
     width: 100%;
@@ -84,6 +89,7 @@
 
   .card:hover &__header {
     transform: translateY(0);
+    // background-color: #ffffff00;
   }
 
   &__thumb {
@@ -145,4 +151,10 @@
   // background-color: lightcyan;
   // color: #0a61b9;
   text-transform: capitalize;
+}
+
+// DETAILS
+
+.details {
+  border-radius: calc(var(--curve) * 0px);
 }
