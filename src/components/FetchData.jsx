@@ -6,21 +6,21 @@ import Navbar from "./Navbar/Navbar";
 import Filter from "./Filter/Filter";
 
 // IMPORT STYLES //
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Episodes from "./Pages/Episodes";
-// import Location from "./Pages/Location";
-import CardDetails from "./Card/CardDetails";
 import "../index.css";
+
+// IMPORT COMPONENTS //
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Episodes from "../Pages/Episodes";
+import Location from "../Pages/Location";
+
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-      </div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:id" element={<CardDetails />} />
+        <Route path="/Episodes" element={<Episodes />} />
+        <Route path="/Location" element={<Location />} />
       </Routes>
     </Router>
   );
@@ -43,10 +43,10 @@ const Home = () => {
       updateFetchedData(data);
     })();
   }, [api]);
+
   return (
     <div className="App">
       <h1 className="headerTitle">Characters</h1>
-
       <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
       <div className="container">
         <div className="row">
