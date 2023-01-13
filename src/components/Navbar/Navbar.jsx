@@ -14,17 +14,13 @@ const Navbar = () => {
         <div className="navbar__collapse" id="navbarNavAltMarkup">
           {" "}
           <div className="navbar__nav">
-            <NavLink to="/" className="nav__link">
+            <NavLink activeClassName="selected" to="/" className="navbar__link">
               Characters
             </NavLink>
-            <NavLink to="/episodes" className="nav__link">
+            <NavLink to="/episodes" className="navbar__link">
               Episode
             </NavLink>
-            <NavLink
-              activeClassName="active"
-              className="nav__link"
-              to="/location"
-            >
+            <NavLink className="navbar__link" to="/location">
               Location
             </NavLink>
           </div>

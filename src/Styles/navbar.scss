@@ -1,5 +1,23 @@
-.active {
+.active .selected {
   color: #0b5ed7 !important;
   font-weight: bold;
   border-bottom: 3px solid #0b5ed7;
+}
+
+.navbar {
+  //   background-color: #0b5ed7;
+  padding: 1em;
+  &__container {
+    border: #0b5ed7 solid 2px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__brand {
+    text-decoration: none;
+    color: #20272f;
+    text-transform: capitalize;
+  }
+  &__link {
+    padding: 0.5em;
+  }
 }
