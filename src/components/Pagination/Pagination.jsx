@@ -23,7 +23,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
         nextLabel="next"
         previousClassName="pagination__prev"
         nextClassName="pagination__next"
-        activeClassName="active"
+        activeclassname="active"
         marginPagesDisplayed={width < 576 ? 1 : 2}
         pageRangeDisplayed={width < 576 ? 1 : 2}
         pageCount={info?.pages}
