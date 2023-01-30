@@ -27,29 +27,33 @@ const Filter = ({
     <div className="filter">
       {/* <h2 className="filter__title">Filters</h2> */}
 
+      {/* <button className="filter__btn filterToggle" onClick={toggleDropdown}>
+        Filters
+      </button>
+      {open && ( */}
+      <div>
+        <Status
+          updatePageNumber={updatePageNumber}
+          updateStatus={updateStatus}
+        />
+        <b class="hr"></b>
+        <Species
+          updatePageNumber={updatePageNumber}
+          updateSpecies={updateSpecies}
+        />
+        <b class="hr"></b>
+        <Gender
+          updatePageNumber={updatePageNumber}
+          updateGender={updateGender}
+        />
+      </div>
+      <b class="hr"></b>
+
       <button onClick={clear} className="filter__btn clear">
         Clear Filters
       </button>
 
-      <button className="filter__btn filterToggle" onClick={toggleDropdown}>
-        Filters
-      </button>
-      {open && (
-        <div>
-          <Status
-            updatePageNumber={updatePageNumber}
-            updateStatus={updateStatus}
-          />
-          <Species
-            updatePageNumber={updatePageNumber}
-            updateSpecies={updateSpecies}
-          />
-          <Gender
-            updatePageNumber={updatePageNumber}
-            updateGender={updateGender}
-          />
-        </div>
-      )}
+      {/* )} */}
     </div>
   );
 };

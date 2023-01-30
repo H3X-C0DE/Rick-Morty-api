@@ -1,0 +1,39 @@
+.hr {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  margin-bottom: 0em;
+  padding: 0.5em 0;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+    bottom: 50%;
+    left: 0;
+  }
+
+  &:before {
+    background: linear-gradient(
+      90deg,
+      $body-bg 0%,
+      $body-bg 50%,
+      transparent 50%,
+      transparent 100%
+    );
+    background-size: 20px;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &:after {
+    background: $gray-500;
+
+    background-size: 200%;
+    background-position: 0%;
+  }
+}
