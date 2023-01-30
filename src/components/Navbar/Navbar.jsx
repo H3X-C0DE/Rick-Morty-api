@@ -3,14 +3,14 @@ import { NavLink, Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 export default function Navbar() {
   return (
-    <div id="navbar" className="navbar-container">
+    <div id="navbar" className="navbar">
       <Link to="/" className="navbar__brand">
-        Rick & Morty <span className="navbar__text-primary">Wiki</span>
+        Rick & Morty <span className="navbar__brand-span"> Wiki</span>
       </Link>
       <Dropdown />
       <div id="navbar-menu">
-        <ul className="navbar-list">
-          <li className="navbar-item slide">
+        <ul className="navbar__list">
+          <li className="navbar__item slide">
             <NavLink activeclassname="selected" to="/" className="navbar__link">
               Characters
             </NavLink>
