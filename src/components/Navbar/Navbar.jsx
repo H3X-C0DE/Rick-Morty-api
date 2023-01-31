@@ -10,17 +10,17 @@ export default function Navbar() {
       <Dropdown />
       <div id="navbar-menu">
         <ul className="navbar__list">
-          <li className="navbar__item slide">
-            <NavLink activeclassname="selected" to="/" className="navbar__link">
+          <li className="navbar__item">
+            <NavLink to="/" className="navbar__link">
               Characters
             </NavLink>
           </li>
-          <li className="navbar-item slide">
+          <li className="navbar__item">
             <NavLink to="/episodes" className="navbar__link">
               Episode
             </NavLink>
           </li>
-          <li className="navbar-item slide">
+          <li className="navbar__item">
             <NavLink className="navbar__link" to="/location">
               Location
             </NavLink>
