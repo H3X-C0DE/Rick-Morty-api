@@ -17,11 +17,11 @@ const Filter = ({
     updatePageNumber(1);
     window.location.reload(false);
   };
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setOpen(!open);
-  };
+  // const toggleDropdown = () => {
+  //   setOpen(!open);
+  // };
 
   return (
     <div className="filter">
