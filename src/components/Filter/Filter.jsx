@@ -36,18 +36,18 @@ const Filter = ({
           updatePageNumber={updatePageNumber}
           updateStatus={updateStatus}
         />
-        <b class="hr"></b>
+        <b className="hr"></b>
         <Species
           updatePageNumber={updatePageNumber}
           updateSpecies={updateSpecies}
         />
-        <b class="hr"></b>
+        <b className="hr"></b>
         <Gender
           updatePageNumber={updatePageNumber}
           updateGender={updateGender}
         />
       </div>
-      <b class="hr"></b>
+      <b className="hr"></b>
 
       <button onClick={clear} className="filter__btn clear">
         Clear Filters
