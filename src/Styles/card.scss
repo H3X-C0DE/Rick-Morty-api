@@ -1,0 +1,165 @@
+:root {
+  --curve: 20;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem 0;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 115%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  border: 5px solid $body-bg;
+  text-align: left;
+  text-transform: capitalize;
+  max-width: fit-content;
+  margin: 0 auto;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $white;
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+  }
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    background-color: $white;
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+  }
+  &__header-text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    color: $gray-900;
+  }
+
+  &__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+  }
+  .card:hover &__overlay {
+    transform: translateY(0);
+  }
+
+  &__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__arc path {
+    fill: $white;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }
+
+  .card:hover &__header {
+    transform: translateY(0);
+    // background-color: #ffffff00;
+  }
+
+  &__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 1.2em;
+    margin: 0 0 0.3em;
+    color: $gray-900;
+    font-family: $font-secondary;
+    font-weight: 700;
+  }
+
+  &__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: 0.8em;
+    color: $gray-500;
+  }
+
+  &__status {
+    font-size: 0.8em;
+    color: $gray-500;
+  }
+
+  &__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    color: $gray-900;
+    &__p {
+      font-weight: bold;
+      color: $gray-800;
+    }
+    &__span {
+      font-weight: 300;
+    }
+  }
+}
+
+.isDead {
+  // background-color: red;
+  // color: #fff;
+}
+.isAlive {
+  // background-color: lime;
+  // color: #212121;
+}
+.isUnknown {
+  // background-color: lightcyan;
+  // color: #0a61b9;
+  text-transform: capitalize;
+}
+
+// DETAILS
+
+.details {
+  position: absolute;
+  top: 15%;
+  width: 100vw;
+  &__card {
+    border-radius: calc(var(--curve) * 0px);
+  }
+  img {
+    border-radius: 10px;
+  }
+}

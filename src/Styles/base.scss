@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  color: $gray-800;
+  background: $body-bg;
+  font-family: $font-primary;
+}
+
+.headerTitle {
+  text-align: center;
+  margin: 1em;
+  padding-top: 2em;
+  text-transform: uppercase;
+  &__underText {
+    text-align: center;
+  }
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  &__form {
+    padding: 1em;
+  }
+}

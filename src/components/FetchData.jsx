@@ -1,49 +1,88 @@
 import { useState, useEffect } from "react";
-import "../styles/card.css";
-//  Fetches data from some API and displays it
+import Search from "./Search/Search";
+import Card from "./Card/Card";
+import Pagination from "./Pagination/Pagination";
+import Navbar from "./Navbar/Navbar";
+import Filter from "./Filter/Filter";
 
-function FetchData() {
-  // Somewhere to store our data
-  const API = `https://rickandmortyapi.com/api/character`;
-  let currentPage = 1;
-  const page = `?page=${currentPage}`;
-  let apiUpdate = `${API}${page}`;
+// IMPORT STYLES //
+import "../index.css";
 
-  const [fetchedData, setFetchedData] = useState(null);
-  console.log(page);
+// IMPORT COMPONENTS //
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Episodes from "../Pages/Episodes";
+import Location from "../Pages/Location";
+import CardDetails from "../components/Card/CardDetails";
 
-  // Using async await
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch(apiUpdate);
-      const data = await response.json();
-
-      setFetchedData(data.results);
-    }
-
-    getData();
-  }, [apiUpdate]);
+function App() {
   return (
-    <>
-      <div className="card-container">
-        {fetchedData &&
-          fetchedData.map((character, index) => {
-            return (
-              <div key={index} id={index} className="card">
-                <img src={character.image} alt={character.name} />
-                <ul>
-                  <li className="name">{character.name}</li>
-                  <li>Sex: {character.gender}</li>
-                  <li>Status: {character.status}</li>
-                  <li>Origin: {character.origin.name}</li>
-                  <li>Unique trait: {character.type}</li>
-                </ul>
-              </div>
-            );
-          })}
-      </div>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<CardDetails />} />
+
+        <Route path="/Episodes/" element={<Episodes />} />
+        <Route path="/Episodes/:id" element={<CardDetails />} />
+
+        <Route path="/Location/" element={<Location />} />
+        <Route path="/Location/:id" element={<CardDetails />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default FetchData;
+const Home = () => {
+  let [pageNumber, updatePageNumber] = useState(1);
+  let [status, updateStatus] = useState("");
+  let [gender, updateGender] = useState("");
+  let [species, updateSpecies] = useState("");
+  let [fetchedData, updateFetchedData] = useState([]);
+  let [search, setSearch] = useState("");
+  let { info, results } = fetchedData;
+
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
+
+  useEffect(() => {
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      updateFetchedData(data);
+    })();
+  }, [api]);
+
+  return (
+    <div className="App">
+      <h1 className="headerTitle">Characters</h1>
+      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
+      <div className="container">
+        <div className="row">
+          <Filter
+            pageNumber={pageNumber}
+            status={status}
+            updateStatus={updateStatus}
+            updateGender={updateGender}
+            updateSpecies={updateSpecies}
+            updatePageNumber={updatePageNumber}
+          />
+          <Pagination
+            info={info}
+            pageNumber={pageNumber}
+            updatePageNumber={updatePageNumber}
+          />
+          <div className="container">
+            <div className="cards">
+              <Card page="/" results={results} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Pagination
+        info={info}
+        pageNumber={pageNumber}
+        updatePageNumber={updatePageNumber}
+      />
+    </div>
+  );
+};
+
+export default App;

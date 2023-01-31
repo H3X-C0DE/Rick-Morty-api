@@ -1,7 +1,6 @@
 // CSS
-import "./styles/global.css";
-import "./styles/lengths.css";
-import "./styles/palette.css";
+import "./index.css";
+import "./main.scss";
 
 // Libraries
 import FetchData from "./components/FetchData";
@@ -9,8 +8,6 @@ import FetchData from "./components/FetchData";
 function App() {
   return (
     <>
-      <h1>Rick & Morty Wiki</h1>
-      <h2>Work in Progress</h2>
       <FetchData />
     </>
   );

@@ -1,0 +1,91 @@
+.isChecked:checked + label {
+  background-color: #0b5ed7;
+  color: white;
+}
+input[type="radio"] {
+  display: none;
+}
+
+.filter {
+  //   border: 3px solid green;
+  max-width: 500px;
+  margin: 1.5em auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &__title {
+    text-align: center;
+    margin: 0.5em;
+    text-transform: uppercase;
+  }
+  &__btn {
+    padding: 0.5em 1em;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+.clear:hover {
+  background-color: $red;
+  color: $dark;
+}
+.filterTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.filterBtn {
+  &__label {
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid $gray-900;
+    margin: 0.2em;
+  }
+}
+
+.clear {
+  background: $body-bg;
+  border: 1px solid $gray-900;
+  border-radius: 6px;
+  // box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: $dark;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.clear:hover,
+.clear:active {
+  background-color: $gray-400;
+  background-position: 0 0;
+  border: 1px solid $red;
+  color: $red;
+}
+
+.clear:active {
+  opacity: 0.5;
+}
