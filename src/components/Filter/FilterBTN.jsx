@@ -13,7 +13,7 @@ const FilterBTN = ({ input, task, updatePageNumber, index, name }) => {
           updatePageNumber(1);
         }}
         className="filterBtn__label"
-        for={`${name}-${index}`}
+        htmlFor={`${name}-${index}`}
       >
         {input}
       </label>
