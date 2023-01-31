@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Gender from "./category/Gender";
 import Species from "./category/Species";
 import Status from "./category/Status";
@@ -17,20 +17,9 @@ const Filter = ({
     updatePageNumber(1);
     window.location.reload(false);
   };
-  // const [open, setOpen] = useState(false);
-
-  // const toggleDropdown = () => {
-  //   setOpen(!open);
-  // };
 
   return (
     <div className="filter">
-      {/* <h2 className="filter__title">Filters</h2> */}
-
-      {/* <button className="filter__btn filterToggle" onClick={toggleDropdown}>
-        Filters
-      </button>
-      {open && ( */}
       <div>
         <Status
           updatePageNumber={updatePageNumber}
