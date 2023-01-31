@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Search from "./Search/Search";
-import Card from "./Card/Card";
+import Search from "../components/Search/Search";
+import Card from "../components/Card/Card";
 import Pagination from "./Pagination/Pagination";
 import Navbar from "./Navbar/Navbar";
 import Filter from "./Filter/Filter";

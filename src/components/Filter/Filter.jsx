@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Gender from "./Category/Gender";
-import Species from "./Category/Species";
-import Status from "./Category/Status";
+import Gender from "./category/Gender";
+import Species from "./category/Species";
+import Status from "./category/Status";
 
 const Filter = ({
   // pageNumber,
