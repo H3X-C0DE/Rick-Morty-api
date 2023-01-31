@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div id="navbar" className="navbar">
       <Link to="/" className="navbar__brand">
-        Rick & Morty <span className="navbar__brand-span"> Wiki</span>
+        Rick & Morty <span className="navbar__brand-span"> Index</span>
       </Link>
       <Dropdown />
       <div id="navbar-menu">
