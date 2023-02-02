@@ -136,32 +136,29 @@
   display: block;
 }
 
-.menu-trigger {
-  background-color: $body-bg;
-  color: $gray-900;
+label.fa-burger {
+  font-size: 2rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 6px;
+  padding: 0.5em;
   border: none;
   vertical-align: middle;
-  transition: box-shadow 0.4s ease;
+  transition: all 0.4s ease;
 }
-.menu-trigger:is(:focus, :hover) {
+#burgerCheck {
+  display: none;
+}
+.navbar-list:hover,
+label.fa-burger:hover {
+  outline: 0;
   color: $blue;
-  transition: 0.2s ease-in-out;
 }
-.menu-trigger span {
-  font-weight: 500;
-  vertical-align: middle;
-  font-size: 14px;
-  /* margin: 0 10px; */
-  padding: 1em;
-}
-.menu-trigger span i {
-  padding: 0;
-  font-size: 2em;
+.navbar-list:active,
+label.fa-burger:active {
+  outline: 0;
+  color: $blue;
 }
 
 /* ///MEDIAQ/// */
