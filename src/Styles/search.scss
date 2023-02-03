@@ -32,11 +32,11 @@
 
   &__btn:hover,
   &__btn:focus {
-    background-color: #07c;
+    background-color: $blue;
   }
 
   &__btn:active {
-    background-color: #0064bd;
+    background-color: $blue;
     box-shadow: none;
   }
 }
