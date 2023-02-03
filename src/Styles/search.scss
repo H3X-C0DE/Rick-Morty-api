@@ -7,11 +7,11 @@
     width: 100%;
   }
   &__btn {
-    background-color: #0b5ed7;
+    background-color: $blue;
     border: 1px solid transparent;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
@@ -39,4 +39,10 @@
     background-color: #0064bd;
     box-shadow: none;
   }
+}
+.search__input {
+  background-color: $gray-800;
+  border: 1px solid $gray-600;
+  border-radius: 5px 0 0 5px;
+  color: $white;
 }

@@ -1,6 +1,6 @@
 .isChecked:checked + label {
-  background-color: #0b5ed7;
-  color: white;
+  background-color: $blue;
+  color: $white;
 }
 input[type="radio"] {
   display: none;
@@ -24,10 +24,7 @@ input[type="radio"] {
     margin: 0 auto;
   }
 }
-.clear:hover {
-  background-color: $red;
-  color: $dark;
-}
+
 .filterTags {
   display: flex;
   flex-wrap: wrap;
@@ -48,18 +45,19 @@ input[type="radio"] {
     padding: 0.5em;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid $gray-900;
+    border: 1px solid $gray-700;
+    background-color: $gray-800;
+    color: $gray-200;
     margin: 0.2em;
   }
 }
 
 .clear {
-  background: $body-bg;
-  border: 1px solid $gray-900;
+  background: $gray-800;
+  border: 1px solid $red;
   border-radius: 6px;
-  // box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: $dark;
+  color: $gray-200;
   cursor: pointer;
   display: inline-block;
   font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
@@ -80,7 +78,7 @@ input[type="radio"] {
 
 .clear:hover,
 .clear:active {
-  background-color: $gray-400;
+  background: $gray-200;
   background-position: 0 0;
   border: 1px solid $red;
   color: $red;
