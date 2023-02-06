@@ -11,6 +11,7 @@
   list-style-type: none;
   text-align: center;
   text-transform: uppercase;
+  color: $gray-200;
 }
 
 .card {
@@ -87,7 +88,6 @@
 
   .card:hover &__header {
     transform: translateY(0);
-    // background-color: #ffffff00;
   }
 
   &__thumb {

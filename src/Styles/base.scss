@@ -23,8 +23,10 @@ body {
   margin: 1em;
   padding-top: 2em;
   text-transform: uppercase;
+  color: $gray-200;
   &__underText {
     text-align: center;
+    color: $gray-200;
   }
 }
 

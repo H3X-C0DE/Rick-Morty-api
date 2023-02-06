@@ -21,9 +21,9 @@ const Search = ({ setSearch, updatePageNumber }) => {
         className="search__input"
         type="text"
       />
-      <button onClick={searchBtn} className="search__btn">
+      {/* <button onClick={searchBtn} className="search__btn">
         Search
-      </button>
+      </button> */}
     </form>
   );
 };
