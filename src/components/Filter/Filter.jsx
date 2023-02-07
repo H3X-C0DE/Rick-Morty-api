@@ -10,6 +10,7 @@ const Filter = ({
   updateGender,
   updateSpecies,
 }) => {
+  // clears the filters out and sets it back to default
   let clear = () => {
     updateStatus("");
     updateGender("");
