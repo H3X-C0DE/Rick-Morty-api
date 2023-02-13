@@ -52,10 +52,10 @@ const Home = () => {
 
   return (
     <div className="App">
-      <h1 className="headerTitle">Characters</h1>
-      <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
-      <div className="container">
-        <div className="row">
+      <div className="banner">
+        <div className="banner__title"></div>
+        <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
+        <div className="container">
           <Filter
             pageNumber={pageNumber}
             status={status}
@@ -64,15 +64,19 @@ const Home = () => {
             updateSpecies={updateSpecies}
             updatePageNumber={updatePageNumber}
           />
-          <Pagination
-            info={info}
-            pageNumber={pageNumber}
-            updatePageNumber={updatePageNumber}
-          />
-          <div className="container">
-            <div className="cards">
-              <Card page="/" results={results} />
-            </div>
+          <div className="pag-box">
+            <Pagination
+              info={info}
+              pageNumber={pageNumber}
+              updatePageNumber={updatePageNumber}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="container">
+          <div className="cards">
+            <Card page="/" results={results} />
           </div>
         </div>
       </div>

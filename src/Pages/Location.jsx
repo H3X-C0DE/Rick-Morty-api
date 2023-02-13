@@ -26,20 +26,23 @@ export default function Episodes() {
 
   return (
     <div className="App">
-      <h1 className="headerTitle">
-        Location :
-        <span className="headerTitle__name">
-          {" "}
-          {name === "" ? "Unknown" : name}
-        </span>
-      </h1>
-      <h3 className="headerTitle__underText">
-        Dimension: {dimension === "" ? "Unknown" : dimension}
-      </h3>
-      <h4 className="headerTitle__underText">
-        Type: {type === "" ? "Unknown" : type}
-      </h4>
+      <div className="banner">
+        <div className="banner__title"></div>
+      </div>
       <div className="container">
+        <h1 className="headerTitle">
+          Location :
+          <span className="headerTitle__name">
+            {" "}
+            {name === "" ? "Unknown" : name}
+          </span>
+        </h1>
+        <h3 className="headerTitle__underText">
+          Dimension: {dimension === "" ? "Unknown" : dimension}
+        </h3>
+        <h4 className="headerTitle__underText">
+          Type: {type === "" ? "Unknown" : type}
+        </h4>
         <div className="row">
           <InputGroup name="Location" changeID={setNumber} total={126} />
           <div className="container">
