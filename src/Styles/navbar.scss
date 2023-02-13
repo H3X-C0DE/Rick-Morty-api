@@ -24,7 +24,7 @@
     text-transform: uppercase;
   }
   &__brand-span {
-    color: $blue;
+    color: $yellow;
   }
   &__list {
     text-transform: uppercase;
@@ -68,7 +68,7 @@
 }
 
 .navbar__link:is(:focus, :hover) {
-  color: $blue;
+  color: $yellow;
   transition: 0.2s ease-in-out;
 }
 
@@ -146,6 +146,7 @@ label.fa-burger {
   border: none;
   vertical-align: middle;
   transition: all 0.4s ease;
+  color: $gray-200;
 }
 #burgerCheck {
   display: none;
@@ -153,12 +154,12 @@ label.fa-burger {
 .navbar-list:hover,
 label.fa-burger:hover {
   outline: 0;
-  color: $blue;
+  color: $yellow;
 }
 .navbar-list:active,
 label.fa-burger:active {
   outline: 0;
-  color: $blue;
+  color: $yellow;
 }
 
 /* ///MEDIAQ/// */

@@ -54,7 +54,7 @@ input[type="radio"] {
 
 .clear {
   background: $gray-800;
-  border: 1px solid $red;
+  border: none;
   border-radius: 6px;
   box-sizing: border-box;
   color: $gray-200;
@@ -78,10 +78,9 @@ input[type="radio"] {
 
 .clear:hover,
 .clear:active {
-  background: $gray-200;
+  background: $red;
   background-position: 0 0;
-  border: 1px solid $red;
-  color: $red;
+  color: $gray-800;
 }
 
 .clear:active {
