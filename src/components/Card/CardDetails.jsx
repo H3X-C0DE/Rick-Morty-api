@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-
+import { useParams, Link } from "react-router-dom";
 const CardDetails = () => {
   let { id } = useParams();
   let [fetchedData, updateFetchedData] = useState([]);
@@ -19,11 +18,15 @@ const CardDetails = () => {
   return (
     <div className="details">
       <div className="card details__card">
+        <Link className="details__back-btn" to="/">
+          ❌
+        </Link>
+
         <div className="card-info">
-          <h1 className="name">{name}</h1>
+          <h1 className="name details__name">{name}</h1>
           <img src={image} alt="" />
 
-          <div className="content">
+          <div className="content details__content">
             {(() => {
               if (status === "Dead") {
                 return (
