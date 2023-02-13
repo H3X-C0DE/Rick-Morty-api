@@ -8,17 +8,23 @@ const Search = ({ setSearch, updatePageNumber }) => {
    and the updatePageNumber prop is called to reset the page number to 1. 
   */
   return (
-    <form className="search">
-      <input
-        onChange={(event) => {
-          updatePageNumber(1);
-          setSearch(event.target.value);
-        }}
-        placeholder="Search for characters"
-        className="search__input"
-        type="text"
-      />
-    </form>
+    <>
+      <label className="labelHidden" htmlFor="search">
+        Search Character
+      </label>
+      <form className="search">
+        <input
+          id="search"
+          onChange={(event) => {
+            updatePageNumber(1);
+            setSearch(event.target.value);
+          }}
+          placeholder="Search for characters"
+          className="search__input"
+          type="text"
+        />
+      </form>
+    </>
   );
 };
 
