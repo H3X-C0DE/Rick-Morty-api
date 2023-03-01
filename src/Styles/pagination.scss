@@ -1,14 +1,21 @@
+.pag-box {
+  background-color: $body-bg;
+  padding-top: 1em;
+}
 .pagination {
   display: flex;
   justify-content: space-around;
   max-width: 400px;
   list-style: none;
   cursor: pointer;
-  margin: 1em auto;
+  margin: 0em auto;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
 
+  a {
+    color: $gray-200;
+  }
   &__next,
   &__prev {
     cursor: pointer;

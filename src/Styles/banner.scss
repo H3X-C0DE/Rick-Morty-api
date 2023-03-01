@@ -1,0 +1,34 @@
+.banner {
+  background-image: url(../assets/image/wp1822725.png);
+  background-size: cover;
+  min-height: 15em;
+  margin-top: 4em;
+  &__title {
+    padding-top: 5.5em;
+    margin: 1em auto 0;
+  }
+}
+
+.headerTitle {
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray-200;
+  font-size: 2em;
+  padding: 0.5em;
+  border-radius: 5px;
+  &__underText {
+    text-align: center;
+    color: $gray-200;
+  }
+}
+.infoTitle {
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray-200;
+  padding: 0.5em;
+  border-radius: 5px;
+  &__underText {
+    text-align: center;
+    color: $gray-200;
+  }
+}

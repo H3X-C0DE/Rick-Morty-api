@@ -3,8 +3,9 @@
   margin: 0 auto;
   max-width: 40vw;
   &__input {
-    height: 3em;
+    height: 2em;
     width: 100%;
+    font-size: 2em;
   }
   &__btn {
     background-color: $blue;
@@ -41,7 +42,8 @@
   }
 }
 .search__input {
-  background-color: $gray-800;
+  background-color: #343a407d;
+
   border: 1px solid $gray-600;
   border-radius: 5px;
   color: $white;

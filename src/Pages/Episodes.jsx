@@ -26,16 +26,19 @@ export default function Episodes() {
 
   return (
     <div className="App">
-      <h1 className="headerTitle">
-        Episode name :{" "}
-        <span className="headerTitle__name">
-          {name === "" ? "Unknown" : name}
-        </span>
-      </h1>
-      <h5 className="headerTitle__underText">
-        Air Date: {air_date === "" ? "Unknown" : air_date}
-      </h5>
+      <div className="banner">
+        <div className="banner__title"></div>
+      </div>
       <div className="container">
+        <h1 className="infoTitle">
+          Episode name :{" "}
+          <span className="infoTitle__name">
+            {name === "" ? "Unknown" : name}
+          </span>
+        </h1>
+        <h5 className="infoTitle__underText">
+          Air Date: {air_date === "" ? "Unknown" : air_date}
+        </h5>
         <div className="row">
           <InputGroup name="Episode" changeID={setID} total={51} />
           <div className="container">
